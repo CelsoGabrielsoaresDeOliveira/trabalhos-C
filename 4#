@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[10];
+    int valor_referencia;
+    int contagem_referencia = 0;
+    
+    printf("Digite 10 números inteiros:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("Número %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+   
+    printf("Digite o valor de referência: ");
+    scanf("%d", &valor_referencia);
+
+    
+    printf("Números maiores que %d:\n", valor_referencia);
+    for (int i = 0; i < 10; ++i) {
+        if (vetor[i] > valor_referencia) {
+            printf("%d ", vetor[i]);
+        }
+        if (vetor[i] == valor_referencia) {
+            contagem_referencia++;
+        }
+    }
+    printf("\n");
+
+    printf("O valor de referência %d aparece %d vezes no vetor.\n", valor_referencia, contagem_referencia);
+
+    return 0;
+}
